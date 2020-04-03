@@ -8,7 +8,7 @@ int main()
 	int credit,number;
 	string subject;
 	string subject_get;
-	ifstream inFile("credit_need",ios::in);
+	ifstream inFile("credit_need.in",ios::in);
 	if(!inFile)
 	{
 		cerr<<"failed to open!"<<endl;
@@ -24,7 +24,7 @@ int main()
 		else if(number==3)
 			ncku.set_general(credit,subject);	
 	}	
-	ifstream Filein("already_learn",ios::in);
+	ifstream Filein("already_learn.in",ios::in);
 	ncku.subject_compulsory_haven_learn=ncku.subject_compulsory;
 	if(!Filein)
 	{
@@ -63,13 +63,13 @@ int main()
 		cin>>input;
 		if(input==1)
 			for(int i=0;i<ncku.subject_compulsory.size();i++)
-				cout<<i<<":"<<ncku.subject_compulsory.at(i)<<endl;
+				cout<<i+1<<":"<<ncku.subject_compulsory.at(i)<<endl;
 		else if(input==2)
 			for(int i=0;i<ncku.subject_elective.size();i++)
-				cout<<ncku.subject_elective.at(i)<<endl;
+				cout<<i+1<<ncku.subject_elective.at(i)<<endl;
 		else if(input==3)
 			for(int i=0;i<ncku.subject_general.size();i++)
-				cout<<ncku.subject_general.at(i)<<endl;
+				cout<<i+1<<ncku.subject_general.at(i)<<endl;
 		else if(input==4)
 			cout<<ncku.get_compulsory()<<endl;
 		else if(input==5)
@@ -80,13 +80,13 @@ int main()
 			cout<<ncku.get_credit_need()<<endl;
 		else if(input==8)
 			for(int i=0;i<ncku.subject_compulsory_haven_learn.size();i++)
-				cout<<i<<":"<<ncku.subject_compulsory_haven_learn.at(i)<<endl;
+				cout<<i+1<<":"<<ncku.subject_compulsory_haven_learn.at(i)<<endl;
 		else if(input==9)
 			for(int i=0;i<ncku.subject_elective_haven_learn.size();i++)
-				cout<<i<<":"<<ncku.subject_elective_haven_learn.at(i)<<endl;
+				cout<<i+1<<":"<<ncku.subject_elective_haven_learn.at(i)<<endl;
 		else if(input==10)
 			for(int i=0;i<ncku.subject_general_haven_learn.size();i++)
-				cout<<i<<":"<<ncku.subject_general_haven_learn.at(i)<<endl;
+				cout<<i+1<<":"<<ncku.subject_general_haven_learn.at(i)<<endl;
 		else if(input==11)
 			cout<<ncku.get_compulsory()-ncku.get_compulsory_haven_learn()<<endl;
 		else if(input==12)

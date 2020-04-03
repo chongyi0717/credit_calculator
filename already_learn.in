@@ -1,6 +1,3 @@
-//1 for compulsory
-//2 for elective
-//3 for general
 1 3 introduction to computer
 1 3 calculus(1)
 1 3 calculus(2)
@@ -10,9 +7,8 @@
 1 3 physics(1)
 1 0 physical education(1)
 1 0 physical education(2)
-1 0 service and learning(1)
-1 0 service and learning(2)
-1 3 physics(2)
+1 0 service learning(1)
+1 0 service learning(2)
 3 2 english(1)
 3 2 english(2)
 3 2 mandarin(1)
